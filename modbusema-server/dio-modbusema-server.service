@@ -1,0 +1,15 @@
+[Unit]
+Description= modbusema Server
+ConditionPathExists=|/usr/bin
+After=network.target
+
+[Service]
+User=root
+ExecStart=/usr/bin/python /srv/dio/modbusema-server
+
+# Restart every >2 seconds to avoid StartLimitInterval failure
+RestartSec=3
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

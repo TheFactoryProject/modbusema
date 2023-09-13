@@ -1,0 +1,16 @@
+[Unit]
+Description= modbusema-autoupload
+ConditionPathExists=|/usr/bin
+After=network.target
+
+[Service]
+User=root
+ExecStart=/usr/bin/python /srv/dio/modbusema-autoupload
+
+# Restart every >2 seconds to avoid StartLimitInterval failure
+RestartSec=3
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
