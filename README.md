@@ -1,7 +1,7 @@
-# Modbusema
+# ModbusEma
 
 
-## Despliegue 📦
+## Desarrollo 📦
 
 Este desarrollo cubre la necesidad de incluir los datos de un sensor ema conectado via un sub rs485 a una raspberry pi.
 
